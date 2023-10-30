@@ -11,7 +11,7 @@
 
     if ($nr == 1)
     {
-    echo	"<script> alert('Usuario logueado.');window.location= 'formulario.html' </script>";
+    echo	"<script> alert('Usuario logueado.');window.location= 'seccionprincipal.html' </script>";
     }
     else
     {

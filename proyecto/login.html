@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="formulario.css">
+  <title>Login</title>
+</head>
+<body>
+  <section class="form-register">
+    <h4>Login</h4>
+<!----------------------------------------------------------------------->
+    <form name="contacto" method="POST" action="login.php">
+  <div class="user-details"> 
+    <div class="column"> 
+    <input class="controls" type="text" name="usuario" id="usuario" placeholder="Ingrese su usuario"required autocomplete="off">
+    <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña"required autocomplete="off">
+    <div class="checkboxvai"><a onclick="abrirform()">Recuperar contraseña</a></div>
+    </div>
+    
+  </div>
+    <input class="botons" type="submit" value="Iniciar sesion">
+    <p><a href="formulario.html">Aun no tienes cuenta?</a></p> 
+   </form>
+  </section>
+
+  <script>
+    function abrirform() { document.getElementById("formrecuperar").style.display = "block";
+    }
+  function cancelarform() { document.getElementById("formrecuperar").style.display = "none";
+  }
+  </script>
+<div class="caja_popup" id="formrecuperar">
+  <form action="recuperar.php" class="contenedor_popup" method="POST">
+  <table>
+  <tr><th colspan="2">Recuperar contraseña</th></tr>
+  <tr>
+  <td><b>&#128231; Correo</b></td>
+  <td><input type="email" name="correo" required class="cajaentradatexto"></td>
+  </tr>
+  <tr>
+  <td colspan="2">
+  <button type="button" onclick="cancelarform()" class="txtrecuperar">Cancelar</button>
+  <input class="txtrecuperar" type="submit" name="btnrecuperar" value="Enviar" onClick="javascript: return confirm('¿Deseas enviar tu contraseña a tu correo?');">
+  </td>
+  </tr>
+  </table>
+  </form>
+  </div>
+</body>
+</html>
